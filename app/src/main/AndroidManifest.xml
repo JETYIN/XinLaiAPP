@@ -70,9 +70,10 @@
             android:name="JPUSH_APPKEY"
             android:value="2832ca59bd517f2fd509ce3b" />
         <!--android:screenOrientation="portrait"限制屏幕智能竖屏-->
+        <!--android:launchMode="singleTask"在进入程序的首次加载页面中将不设置此种模式，
+        不然会在退出程序重新进入时在此启动记载页面-->
         <activity
             android:name=".launcher.LaunchActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppStartLoad">
             <intent-filter>

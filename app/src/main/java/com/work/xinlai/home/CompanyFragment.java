@@ -34,7 +34,7 @@ public class CompanyFragment extends TabFragment implements MlWebView.WebViewLis
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBrowser.addJavascriptInterface();
+        //mBrowser.addJavascriptInterface();
     }
 
     @Override
