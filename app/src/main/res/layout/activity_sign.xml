@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.work.xinlai.component.AvatarView
+            android:id="@+id/image_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_user_face"
+            app:borderType="circle"
+            app:cornerRadius="100dp" />
+
+        <TextView
+            android:id="@+id/user_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/image_1"
+            android:text="user"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_tv"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/image_1"
+            android:text="user-user"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/start_time_bt"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_icon_frame_button"
+            android:drawableRight="@drawable/icon_row_down"
+            android:onClick="onClick"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/text_normal"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/image_1"
+            android:layout_marginTop="5dp"
+            android:background="@color/txt_in_card_light" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_work_rl"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/top_rl"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/sign_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:text="打卡时间09:30"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/work_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/sign_time_tv"
+            android:text="(上班时间09:30)"
+            android:textSize="14sp"
+
+            />
+
+        <TextView
+            android:id="@+id/wifi_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_time_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/sign_status_tv"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi_name_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/login_bg"
+            android:gravity="center"
+            android:text="正常"
+            android:textSize="12sp"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_workout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/sign_work_rl"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/sign_timeout_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="打卡时间09:30"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/work_timeout_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/sign_timeout_tv"
+            android:text="(下班时间17:30)"
+            android:textSize="14sp"
+
+            />
+
+        <TextView
+            android:id="@+id/wifi_nameout_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/work_timeout_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/sign_statusout_tv"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi_nameout_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/login_bg"
+            android:gravity="center"
+            android:text="正常"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/update_sign_tv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_statusout_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_text_update"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="更新打卡"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_rl"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bg_sign_text"
+        android:clickable="true"
+        android:onClick="onClick">
+
+        <TextView
+            android:id="@+id/sign_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="textview"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_tv"
+            android:layout_centerInParent="true"
+            android:text="time"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wifi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="已进入WI-FI考勤范围：wifi"
+        android:textSize="12sp" />
+</RelativeLayout>

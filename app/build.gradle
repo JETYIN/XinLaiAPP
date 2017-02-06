@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        applicationId "com.work.xinlai"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+     /*   //添加极光推送ndk
+        ndk {
+            abiFilters "arm64-v8a", "armeabi"
+        }*/
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //so包编译
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+//短信验证arr文件
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:23.0.1'
+    compile files('libs/volley.jar')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/MobTools-2016.1012.1447.jar')
+    compile files('libs/MobCommons-2016.1012.1447.jar')
+    //添加额外的arr包 支持
+    compile name: 'SMSSDK-2.1.2', ext: 'aar'
+    //compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
+    compile files('libs/jcore-android_v1.0.0.jar')
+    compile files('libs/jpush-android_v3.0.0.jar')
+    compile files('libs/zxing-core-3.0.0-sources.jar')
+    compile files('libs/zxing-core-3.0.0.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+}

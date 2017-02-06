@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!--动画延长时间-->
+    <item name="activity_slide_anim_duration" type="integer">350</item>
+    </resources>

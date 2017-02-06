@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--头像圆角及描边-->
+    <declare-styleable name="AvatarView">
+        <attr name="borderType">
+            <enum name="circle" value="0" />
+            <enum name="roundCorner" value="1" />
+        </attr>
+        <attr name="cornerRadius" format="reference|dimension" />
+        <!---->
+    </declare-styleable>
+
+    <!--轮播组件-->
+    <declare-styleable name="PageIndicator">
+        <attr name="dotColor" format="reference|color" />
+        <attr name="dotColorSelected" format="reference|color" />
+        <attr name="dotSize" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonBanner">
+        <attr name="banner_plate" format="integer" />
+    </declare-styleable>
+
+    <!--自定义gridview-->
+    <declare-styleable name="LineGridView">
+        <attr name="LineColor" format="reference|color" />
+    </declare-styleable>
+
+    <!--avatar-->
+    <declare-styleable name="AvatarTextView">
+        <attr name="backGroundColor" format="reference|color" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="radius" format="dimension|reference" />
+        <attr name="textString" format="reference|string" />
+        <attr name="textStringSize" format="integer|reference" />
+    </declare-styleable>
+</resources>

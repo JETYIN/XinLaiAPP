@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--xinlai start-->
+    <!--application theme corlor-->
+    <color name="app_basicbg_window_color">#F5F3EF</color>
+    <color name="app_basicstyle_tv_color">#111</color>
+    <color name="app_basicstylehint_tv_color">#CACACA</color>
+    <color name="app_basicstyle_bu_color">#FFF</color>
+
+    <!--baseactivity-->
+    <color name="baseactivity_themeline_color">#b2b2b2</color>
+    <color name="white">#ffffff</color>
+    <color name="txt_in_card_light">#A1A1A1</color>
+    <!--end-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--map-->
+    <color name="map_show_txt_color">#4D4D4D</color>
+
+
+
+    <color name="text_normal">#252525</color>
+    <color name="text_grey">#808080</color>
+    <color name="btn_blue">#34CED9</color>
+    <color name="transparent">#0000</color>
+    <!--tab color-->
+    <color name="tab_indicator">#d6d6d6</color>
+    <color name="tab_tv_normal">#999999</color>
+    <color name="tab_tv_selected">#45c01a</color>
+    <color name="tab_bg">#fcfcfc</color>
+    <color name="tab_div">#d6d6d6</color>
+</resources>

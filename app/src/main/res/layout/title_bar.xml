@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/baseactivity_theme_margin_top"
+    android:background="@color/white">
+
+    <!--后退图标-->
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="@dimen/titlebar_btn_width"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/botton_bg_arrow"
+        android:background="@drawable/selector_btn_title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/XinLai.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="6dp"
+        android:ellipsize="middle"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:maxWidth="210dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="#000" />
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="@dimen/titlebar_btn_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/botton_bg_arrow"
+        android:background="@drawable/selector_btn_title"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baidumap_location_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="80dp"
+    android:layout_marginTop="40dp"
+    android:orientation="vertical">
+
+    <com.work.xinlai.component.StaticMapView
+        android:id="@+id/mapvew_location_smv"
+        android:layout_width="180dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/location_adr_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="180dp"
+        android:padding="2dp"
+        android:textColor="#44B86B"
+        android:textSize="12sp" />
+
+
+</LinearLayout>
