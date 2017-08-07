@@ -16,11 +16,13 @@ import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.radar.RadarNearbyResult;
 import com.baidu.mapapi.search.geocode.GeoCodeResult;
 import com.baidu.mapapi.search.geocode.GeoCoder;
 import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
+import com.baidu.mapapi.search.poi.PoiSearch;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.work.xinlai.R;
@@ -89,8 +91,12 @@ public class MapActivity extends BaseActivity implements LocationHelper.Location
         }
         enableMyLocation();
         updateMyLocation();
+        //RadarNearbyResult
     }
 
+    private void show(){
+
+    }
     private void updateMapCenter() {
         if (mLatLng != null) {
             mMapView.getMap().setMapStatus(MapStatusUpdateFactory.newLatLng(mLatLng));

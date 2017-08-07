@@ -41,7 +41,15 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--自定义权限场景，两个不同app中，app A需要发送消息到app B，在A中自定义声明一个权限，在B中注册使用此权限，那么B就可以收到A的消息，不注册声明则不行-->
+    <uses-permission android:name="permission.dylan"/>
+    <!--app A中自定义权限,app A中需要在将要使用的activity或是reciver中声明此权限，app B中添加uses-permission-->
+    <permission
+        android:name="android.permission.dylan"
 
+        >
+
+    </permission>
     <!--使用自定义application-->
     <application
         android:name=".launcher.XinlaiApplication"
@@ -75,6 +83,7 @@
         <activity
             android:name=".launcher.LaunchActivity"
             android:screenOrientation="portrait"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.AppStartLoad">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -22,6 +22,7 @@ import com.baidu.location.Poi;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.search.geocode.GeoCodeOption;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.work.xinlai.R;
@@ -369,7 +370,7 @@ public class SignActivity extends BaseActivity implements View.OnClickListener, 
                 } else if (location.getLocType() == BDLocation.TypeCriteriaException) {
 
                 }
-                logMsg(location.getAddrStr());
+                logMsg(location.getAddrStr());//将获取到的物理定位结果设置到布局上
             }
         }
 

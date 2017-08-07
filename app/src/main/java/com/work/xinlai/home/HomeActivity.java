@@ -1,5 +1,7 @@
 package com.work.xinlai.home;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.lidroid.xutils.ViewUtils;
@@ -49,6 +52,33 @@ public class HomeActivity extends FragmentActivity {
         setContentView(R.layout.activity_home);
         ViewUtils.inject(this);
         biuildData();
+        show();
+    }
+
+
+    private void show(){
+
+
+        if(getIsFistLoadding(HomeActivity.this)==true){
+
+        Toast.makeText(HomeActivity.this,"第一次启动",Toast.LENGTH_SHORT).show();
+
+
+        }
+        setIsFirstLoading(HomeActivity.this,false);//将false存入键isFist
+    }
+    /**将当前状态存入sh**/
+    private void setIsFirstLoading(Context context,boolean isFlag){
+        SharedPreferences sharedPreferences=context.getSharedPreferences("funcell",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putBoolean("isFist",isFlag);
+        editor.commit();
+    }
+
+    private boolean getIsFistLoadding(Context context){
+        SharedPreferences sharedPreferences=context.getSharedPreferences("funcell",Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("isFist",true);
+
     }
 
     private void biuildData() {

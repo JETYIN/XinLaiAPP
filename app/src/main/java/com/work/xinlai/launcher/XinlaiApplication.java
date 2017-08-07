@@ -36,6 +36,7 @@ public class XinlaiApplication extends Application {
         app = this;
         mContext = getApplicationContext();
         locationService = new LocationService(mContext);
+        //如果当前进程还存在并未被杀掉，那么就不在调用三方插件初始化
         if (!quickStart()) {
             init();
         }
